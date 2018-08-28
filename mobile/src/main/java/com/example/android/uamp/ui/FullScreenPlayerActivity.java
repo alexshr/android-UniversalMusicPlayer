@@ -214,7 +214,7 @@ public class FullScreenPlayerActivity extends ActionBarCastActivity {
     }
 
     private void connectToSession(MediaSessionCompat.Token token) throws RemoteException {
-        MediaControllerCompat mediaController = getSupportMediaController();
+        MediaControllerCompat mediaController = MediaControllerCompat.getMediaController(this);
         if (mediaController == null) {
             mediaController = new MediaControllerCompat(FullScreenPlayerActivity.this, token);
         }
